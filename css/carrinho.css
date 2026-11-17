@@ -1,0 +1,167 @@
+/* CARRINHO */
+#abrir-carrinho {
+  width: 128px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.carrinho {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  color: aliceblue;
+  background-color: rgba(0, 0, 0, 0.671);
+  z-index: 1000;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+}
+
+/* CARRINHO ABERTO */
+
+.carrinho.aberto {
+  right: 0;
+}
+
+/* CABEÇALHO */
+
+.carrinho-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #3f2815;
+}
+
+.carrinho-header h2 {
+  margin: 0;
+}
+
+/* BOTÃO FECHAR */
+
+#fechar-carrinho {
+  border: none;
+  background: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ITEM DO CARRINHO */
+
+.item-carrinho {
+  margin: 15px;
+  color: aliceblue;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #3f2815;
+}
+
+.item-carrinho h3 {
+  margin-top: 0;
+}
+
+/* QUANTIDADE */
+
+.quantidade {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.quantidade button {
+  width: 35px;
+
+  height: 35px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-size: 20px;
+}
+
+/* REMOVER */
+
+.btn-remover {
+  border: none;
+
+  padding: 8px 12px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+/* DADOS DO CLIENTE */
+
+.dados-cliente {
+  padding: 15px;
+}
+
+.dados-cliente h3 {
+  margin-top: 0;
+}
+
+.dados-cliente label {
+  display: block;
+
+  margin-top: 12px;
+
+  margin-bottom: 5px;
+}
+
+.dados-cliente input,
+.dados-cliente select,
+.dados-cliente textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 10px;
+
+  border-radius: 5px;
+
+  border: none;
+}
+
+.dados-cliente textarea {
+  height: 80px;
+
+  resize: vertical;
+}
+
+/* TOTAL */
+
+.total-carrinho {
+  padding: 15px;
+
+  border-top: 1px solid #555;
+}
+
+.total-carrinho h3 {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+/* FINALIZAR */
+
+#finalizar-pedido {
+  display: block;
+  width: calc(100% - 30px);
+  margin: 0 15px 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}

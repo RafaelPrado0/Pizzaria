@@ -1,0 +1,95 @@
+.main-header {
+  background-color: #3f2815;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 20px;
+  position: relative;
+}
+.logo-restaurant {
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: -26px;
+}
+.img-sidebar {
+  padding-top: 16px;
+}
+input[type="checkbox"]:checked ~ nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(8, 8, 8, 0.055);
+  backdrop-filter: blur(2px);
+  color: rgb(244, 248, 252);
+  display: block;
+}
+nav {
+  display: none;
+}
+.list-links {
+  list-style: none;
+}
+.list-links li {
+  margin: 16px 0;
+}
+.list-links li a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: rgb(244, 248, 252);
+}
+.header {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .main-header {
+    padding: 30px 24px;
+  }
+  .logo-restaurant {
+    margin-top: -50px;
+    height: 160px;
+  }
+  .img-sidebar {
+    height: 26px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .logo-restaurant {
+    margin-top: -94px;
+    height: 290px;
+  }
+  .list-links li a {
+    font-size: 30px;
+  }
+  .list-links a:hover {
+    color: #df751e;
+    text-decoration: underline;
+  }
+  .main-header {
+    padding: 50px 24px;
+  }
+  .navgation-menu {
+    margin-top: 0;
+    width: 467px;
+  }
+  .navgation-menu label {
+    display: none;
+  }
+  .navgation-menu nav {
+    display: block;
+  }
+  .navgation-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  .navgation-menu ul li {
+    margin: 0px;
+  }
+}

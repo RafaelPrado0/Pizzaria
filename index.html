@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Pizzaria</title>
+  </head>
+
+  <body>
+    <!-- JANELA DO CARRINHO -->
+
+    <div id="carrinho" class="carrinho">
+      <div class="carrinho-header">
+        <h2>Seu Carrinho</h2>
+
+        <button id="fechar-carrinho">&times;</button>
+      </div>
+
+      <!-- PRODUTOS -->
+      <div id="lista-carrinho"></div>
+
+      <!-- DADOS DO CLIENTE -->
+
+      <div class="dados-cliente">
+        <h3>Dados do pedido</h3>
+
+        <label for="nome"> Nome: </label>
+
+        <input type="text" id="nome" placeholder="Digite seu nome" />
+
+        <label for="endereco"> Endereço: </label>
+
+        <input type="text" id="endereco" placeholder="Digite seu endereço" />
+
+        <label for="telefone"> Telefone: </label>
+
+        <input type="tel" id="telefone" placeholder="Digite seu telefone" />
+
+        <label for="pagamento"> Forma de pagamento: </label>
+
+        <select id="pagamento">
+          <option value="" disabled selected>Selecione</option>
+
+          <option value="Pix">Pix</option>
+
+          <option value="Crédito">Crédito</option>
+
+          <option value="Débito">Débito</option>
+
+          <option value="Dinheiro">Dinheiro</option>
+        </select>
+
+        <label for="observacoes"> Observações: </label>
+
+        <textarea
+          id="observacoes"
+          placeholder="Alguma observação sobre o pedido?"
+        ></textarea>
+      </div>
+
+      <!-- TOTAL -->
+
+      <div class="total-carrinho">
+        <h3>
+          Total:
+          <span id="total-carrinho">R$ 0,00</span>
+        </h3>
+      </div>
+
+      <!-- FINALIZAR -->
+
+      <button id="finalizar-pedido">Finalizar Pedido</button>
+    </div>
+
+    <!-- FIM JANELA DO CARRINHO -->
+
+    <header class="main-header">
+      <div>
+        <a href="#" class="logo" title="voltar para a página inicial"
+          ><img
+            class="logo-restaurant"
+            src="img/img-logotipo2.png"
+            alt="logo do restaurante"
+        /></a>
+      </div>
+      <div class="navgation-menu">
+        <label for="menu-sidebar"
+          ><img class="img-sidebar" src="img/menu.png" alt="menu"
+        /></label>
+        <input type="checkbox" id="menu-sidebar" hidden />
+        <nav>
+          <ul class="list-links">
+            <li>
+              <a href="#" title="aceesar página de login">Login</a>
+            </li>
+
+            <li>
+              <a href="#" title="aceesar página de Cadastro">Cadastro</a>
+            </li>
+
+            <li>
+              <button id="abrir-carrinho" title="aceesar a janela do Carrinho">
+                Carrinho
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-img">
+          <div>
+            <div>
+              <img class="img-hero" src="img/logo.png" alt="" />
+            </div>
+            <h2>
+              Cada prato é preparado com dedicação para que você aproveite o
+              melhor da nossa culinária em cada visita!
+            </h2>
+          </div>
+        </div>
+      </section>
+      <section class="menu" id="1">
+        <h2 class="sub-title">Cardapio</h2>
+        <h3 class="sub-title">Pizzas</h3>
+
+        <!-- Pizza de Calabresa -->
+        <div class="card-produto">
+          <img src="img/pizza-calabresa.png" alt="Pizza de Calabresa" />
+
+          <div class="info">
+            <h3>Pizza de Calabresa</h3>
+            <p>
+              Molho de tomate, mussarela, calabresa fatiada, cebola e orégano.
+            </p>
+
+            <div class="preco">
+              <span>R$ 42,90</span>
+              <button
+                class="btn-comprar"
+                data-produto="Pizza de Calabresa"
+                data-preco="42.90"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Pizza de Margherita -->
+        <div class="card-produto">
+          <img src="img/pizza-margherita.png" alt="Pizza de Margherita" />
+
+          <div class="info">
+            <h3>Pizza de Margherita</h3>
+            <p>
+              Molho de tomate, Mussarela, Tomate em rodelas, Manjericão fresco e
+              orégano
+            </p>
+
+            <div class="preco">
+              <span>R$ 42,90</span>
+              <button
+                class="btn-comprar"
+                data-produto="Pizza de Margherita"
+                data-preco="42.90"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Pizza de Frango -->
+        <div class="card-produto">
+          <img src="img/pizza-frango.png" alt="Pizza de Frango" />
+
+          <div class="info">
+            <h3>Pizza de Frango</h3>
+            <p>
+              Mussarela, frango grelhado, milho, champignon, cebola roxa e
+              orégano.
+            </p>
+
+            <div class="preco">
+              <span>R$ 42,90</span>
+              <button
+                class="btn-comprar"
+                data-produto="Pizza de Frango"
+                data-preco="42.90"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Pizza Havaiana -->
+        <div class="card-produto">
+          <img src="img/pizza-havaiana.png" alt="Pizza Havaiana" />
+
+          <div class="info">
+            <h3>Pizza Havaiana</h3>
+            <p>
+              Molho de tomate, mussarela, presunto,abacaxi em cubos e orégano
+            </p>
+
+            <div class="preco">
+              <span>R$ 42,90</span>
+              <button
+                class="btn-comprar"
+                data-produto="Pizza Havaiana"
+                data-preco="42.90"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="menu" id="2">
+        <!-- Bebidas -->
+        <h3 class="sub-title">Bebidas</h3>
+        <!-- Coca Cola -->
+        <div class="card-produto">
+          <img src="img/refrigerante-coca-cola.png" alt="Coca-cola" />
+
+          <div class="info">
+            <h3>Coca-Cola 1L</h3>
+            <p>Refrescante e gelada, acompanhada de um copo com gelo.</p>
+
+            <div class="preco">
+              <span>R$ 10,90</span>
+              <button
+                class="btn-comprar"
+                data-produto="Coca-Cola 1L"
+                data-preco="10.90"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Pepsi Cola -->
+        <div class="card-produto">
+          <img src="img/refrigerante-pepsi.png" alt="Pespsi Cola" />
+
+          <div class="info">
+            <h3>Pepsi Cola 2L</h3>
+            <p>Refrescante e gelada, acompanhada de um copo com gelo.</p>
+
+            <div class="preco">
+              <span>R$ 12,90</span>
+              <button
+                class="btn-comprar"
+                data-produto="Pepsi Cola"
+                data-preco="12.90"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Jarra de Suco -->
+        <div class="card-produto">
+          <img src="img/suco-de-laranja.png" alt="Jarra de Suco" />
+
+          <div class="info">
+            <h3>Jarra de Suco 1L</h3>
+            <p>Refrescante e gelada, acompanhada de um copo com gelo.</p>
+
+            <div class="preco">
+              <span>R$ 12,90</span>
+              <button
+                class="btn-comprar"
+                data-produto="Jarra de Suco 1L"
+                data-preco="12.90"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Agua de coco -->
+        <div class="card-produto">
+          <img src="img/agua-de-coco.png" alt="Agua de Coco" />
+
+          <div class="info">
+            <h3>Água de Coco 1L</h3>
+            <p>Refrescante e gelada, acompanhada de um copo com gelo.</p>
+
+            <div class="preco">
+              <span>R$ 10,90</span>
+              <button
+                class="btn-comprar"
+                data-produto="Água de Coco 1L"
+                data-preco="10.90"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
